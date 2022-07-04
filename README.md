@@ -8,7 +8,7 @@ Available at `localhost:8080`.
 
 ## License
 
-Flix is released under the [MIT license](./LICENSE.md).
+Greeter Server is released under the [MIT license](./LICENSE.md).
 
 ## Copyright
 
