@@ -1,6 +1,10 @@
-# GreeterServer
+# Greeter Server
 
-**TODO: Add description**
+A place to service hello requests via grpc.
+
+Start gRPC server with `mix grpc.server`.
+
+Available at `localhost:8080`.
 
 ## Installation
 
@@ -18,4 +22,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/greeter_server>.
-
