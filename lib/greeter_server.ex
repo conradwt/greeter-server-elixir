@@ -3,16 +3,16 @@ defmodule GreeterServer do
   Documentation for `GreeterServer`.
   """
 
-  @doc """
-  Hello world.
+  @spec say_hello(String.t()) :: {:ok, String.t()} | {:error, any}
+  def say_hello(name) when is_binary(name) do
+    case String.length(name) > 0 do
+      true ->
+        {:ok, "Hello #{name}"}
 
-  ## Examples
-
-      iex> GreeterServer.hello()
-      :world
-
-  """
-  def hello do
-    :world
+      _error ->
+        {:error, "String cannot be blank."}
+    end
   end
+
+  def say_hello(_name), do: {:error, "Invalid input."}
 end

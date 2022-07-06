@@ -8,7 +8,7 @@ defmodule GreeterServer.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {GRPC.Server.Supervisor, [{GreeterServer.Endpoint, 8080}]}
+      {GRPC.Server.Supervisor, {GreeterServer.Endpoint, 8080}}
       # Starts a worker by calling: GreeterServer.Worker.start_link(arg)
       # {GreeterServer.Worker, arg}
     ]
