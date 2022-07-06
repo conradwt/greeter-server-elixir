@@ -1,5 +1,5 @@
 defmodule GreeterServer.Endpoint do
-  user(GRPC.Endpoint)
+  use GRPC.Endpoint
 
   intercept(GRPC.Server.Logger)
   run(GreeterServer.GreeterService.Server)
