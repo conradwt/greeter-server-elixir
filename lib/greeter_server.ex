@@ -7,7 +7,7 @@ defmodule GreeterServer do
   def say_hello(name) when is_binary(name) do
     case String.length(name) > 0 do
       true ->
-        {:ok, "Hello #{name}"}
+        {:ok, "Hello #{name}!"}
 
       _error ->
         {:error, "String cannot be blank."}
