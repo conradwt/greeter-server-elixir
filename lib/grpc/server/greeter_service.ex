@@ -15,15 +15,23 @@ defmodule GreeterServer.GreeterService.Server do
 
   def say_hello(%HelloRequest{name: name}, _stream) do
     with {:ok, message} <- GreeterServer.say_hello(name) do
-      HelloResponse.new(message: message)
+      Protobuf.Builder.new(HelloResponse, message: message)
     else
       {:error, reason} ->
         Logger.info(reason)
-        HelloResponse.new()
+
+        Protobuf.Builder.new(HelloResponse, [])
 
       _error ->
         Logger.info("Error completing request")
-        HelloResponse.new()
+
+        Protobuf.Builder.new(HelloResponse, [])
     end
   end
+
+  def start(port) do
+    GRPC.Server.start(__MODULE__, port)
+  end
+
+  def stop(), do: GRPC.Server.stop(__MODULE__)
 end
