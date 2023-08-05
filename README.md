@@ -1,10 +1,37 @@
 # Greeter Server
 
-A place to service hello requests via grpc.
+The purpose of this repository is to create Greeter server
+for responding to Greeter client requests.
 
-Start gRPC server with `mix grpc.server`.
+## Starting the Greeter server
 
-Available at `localhost:8080`.
+1. start an iex session
+
+   ```zsh
+   iex -S mix
+   ```
+
+2. start the Greet server by entering the following:
+
+   ```elixir
+   GreeterServer.GreeterService.Server.start(8080)
+   ```
+
+Note: The Greeter service is available on host, `localhost`, that has the port, `:8080`.
+
+## Stopping the Greeter server
+
+1. start another iex session
+
+   ```zsh
+   iex -S mix
+   ```
+
+2. stop the Greeter server by entering the following:
+
+   ```elixir
+   GreeterServer.GreeterService.Server.stop()
+   ```
 
 ## License
 
