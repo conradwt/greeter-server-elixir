@@ -12,4 +12,4 @@ Greeter Server is released under the [MIT license](./LICENSE.md).
 
 ## Copyright
 
-Copyright &copy; 2022 - 2023 Conrad Taylor. All rights Reserved.
+Copyright &copy; 2022 - 2023 Conrad Taylor. All rights reserved.
