@@ -17,7 +17,7 @@ for responding to Greeter client requests.
    GreeterServer.GreeterService.Server.start(8080)
    ```
 
-Note: The Greeter service is available on host, `localhost`, that has the port, `:8080`.
+Note: The Greeter service is available on host, `localhost`, that has the port, `8080`.
 
 ## Stopping the Greeter server
 
