@@ -5,7 +5,7 @@ defmodule GreeterServer.MixProject do
     [
       app: :greeter_server,
       version: "0.1.0",
-      elixir: "~> 1.15.4",
+      elixir: "~> 1.15.7",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
